@@ -7,7 +7,7 @@ def test_criar_cliente():
     assert cliente.email == "vanilton18@gmail.com"
 
 
-def adicionar_produto_ao_pedido():
+def test_adicionar_produto_ao_pedido():
     pedido = Pedido(cliente=Cliente("Maria", "maria@email.com"))
     produto = Produto(nome="Laptop", preco=1000.00)
 
