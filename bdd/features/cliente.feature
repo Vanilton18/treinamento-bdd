@@ -6,3 +6,8 @@ Feature: Cliente se identificar no ecommerce
   Scenario: Cliente autenticando na loja
     Given o cliente possui registro na loja
     Then o sistema confirma a autenticidade do cliente
+
+
+  Scenario: Cliente autenticando
+    Given o cliente possui registro atualizado
+    Then o sistema confirma a autenticidade do cliente
