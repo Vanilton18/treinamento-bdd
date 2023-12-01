@@ -9,4 +9,4 @@ Feature: Autenticacao
   Scenario: Autenticar na solução com falha
     Given possuo a url de autenticacao
     When informo usuario e senha invalido
-    Then usuario autenticado com sucesso
+    Then ocorre falha na autenticao

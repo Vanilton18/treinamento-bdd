@@ -11,6 +11,11 @@ from playwright.sync_api import Playwright, APIRequestContext
 from typing import Generator
 
 
+@scenario('../features/autenticacao.feature', 'Autenticar na solução com falha')
+def test_autenticar_na_solucao_com_falha():
+    pass
+
+
 @scenario('../features/autenticacao.feature', 'Autenticar na solução')
 def test_autenticar_na_solucao():
     """Autenticar na solução."""
@@ -33,10 +38,26 @@ def informar_usuario_senha(api_request_context):
     return cliente
 
 
+@when("informo usuario e senha invalido", target_fixture="status_cliente")
+def informar_usuario_senha_invalido(api_request_context):
+    data = {
+        "username": "admin2",
+        "password": "123456"
+    }
+
+    cliente = api_request_context.post("/v1/auth/login/", data=data)
+    return cliente
+
+
 @then('usuario autenticado com sucesso')
 def verificar_autenticacao(status_cliente):
     assert status_cliente.ok
-    assert status_cliente.status is 200
+    assert status_cliente.status == 200
+
+
+@then('ocorre falha na autenticao')
+def verificar_autenticacao_com_falha(status_cliente):
+    assert status_cliente.status == 401
 
 
 @pytest.fixture(scope="session")
@@ -51,3 +72,5 @@ def api_request_context(
     )
     yield request_context
     request_context.dispose()
+
+
