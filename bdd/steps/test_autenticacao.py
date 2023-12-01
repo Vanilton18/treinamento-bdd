@@ -11,12 +11,12 @@ from playwright.sync_api import Playwright, APIRequestContext
 from typing import Generator
 
 
-@scenario('../features/autenticacao.feature', 'Autenticar na solução com falha')
+@scenario('autenticacao.feature', 'Autenticar na solução com falha')
 def test_autenticar_na_solucao_com_falha():
     pass
 
 
-@scenario('../features/autenticacao.feature', 'Autenticar na solução')
+@scenario('autenticacao.feature', 'Autenticar na solução')
 def test_autenticar_na_solucao():
     """Autenticar na solução."""
     pass

@@ -24,7 +24,7 @@ def api_request_context(
     request_context.dispose()
 
 
-@scenario('../features/categoria.feature', 'Criar categoria')
+@scenario('categoria.feature', 'Criar categoria')
 def test_criar_categoria():
     """Criar categoria."""
     pass

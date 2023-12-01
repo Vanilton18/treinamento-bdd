@@ -9,11 +9,11 @@ from tdd.app.app import Cliente
 #    return cliente
 
 
-@scenario('../features/cliente.feature', 'Cliente autenticando')
+@scenario('cliente.feature', 'Cliente autenticando')
 def test_cliente_autenticando():
     pass
 
-@scenario('../features/cliente.feature', 'Cliente autenticando na loja')
+@scenario('cliente.feature', 'Cliente autenticando na loja')
 def test_cliente_autenticando_na_loja():
     """Cliente autenticando na loja."""
     pass
