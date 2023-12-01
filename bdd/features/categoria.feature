@@ -1,5 +1,8 @@
 Feature: Categoria
 
+  Background:
+    Given nao existem categorias cadastradas
+
   Scenario: Criar categoria
     Given o usuario autentica como administrador
     When o usuario cria uma categoria com nome "Casa"

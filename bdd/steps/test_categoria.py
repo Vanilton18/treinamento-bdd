@@ -8,7 +8,7 @@ from pytest_bdd import (
 import pytest
 from playwright.sync_api import Playwright, APIRequestContext
 from typing import Generator
-
+import utils.database
 
 @pytest.fixture(scope="session")
 def api_request_context(
@@ -58,4 +58,9 @@ def criar_categoria(api_request_context, token, categoria):
 def verificar_categoria(categoria_criada):
     assert categoria_criada.ok
     assert categoria_criada.status == 201
+
+
+@given('nao existem categorias cadastradas')
+def remove_categoria():
+    utils.database.clean_category()
 
