@@ -7,6 +7,12 @@ from pytest_bdd import (
 )
 
 
+@scenario('tabela.feature', 'Comer laranjas com argumento tabulados')
+def test_argumento_com_tabela():
+    """Argumento para os passos given, when, then."""
+    pass
+
+
 @scenario('argumentos.feature', 'Argumento para os passos given, when, then')
 def test_argumento_para_os_passos_given_when_then():
     """Argumento para os passos given, when, then."""
