@@ -13,4 +13,5 @@ Feature: Categoria
     | nome | slug | is_lux |
     |  Casa   |  casa    |  sim       |
     |  Automotivo   |  automotivo    |  não       |
+    |  Cama   |  cama    |  não       |
 
